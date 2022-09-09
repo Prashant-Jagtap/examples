@@ -16,7 +16,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.merged == true) || (github.event_name == 'push' && contains(github.event.head_commit.message, ‘BUILD_CONTAINER_IMAGE’)) }}
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.merged == true) || (github.event_name == 'push' && contains(github.event.head_commit.message, 'BUILD_CONTAINER_IMAGE')) }}
 
     steps:
     - name: Checkout Repository
